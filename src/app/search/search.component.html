@@ -1,0 +1,13 @@
+<html>
+<body class = "backGround">
+  <br>
+  <div class="container-fluid">
+    <div class="row">
+      <figure *ngFor="let item of movieData" class="col-lg-2 cardDesign" (click) = "onCardClick(item.id)">
+        <img [src]="item.poster_path" alt="Image not Found">
+        <figcaption style="display: block;">{{item.title}}</figcaption>
+      </figure>
+    </div>
+  </div>
+</body>
+</html>

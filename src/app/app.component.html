@@ -1,0 +1,19 @@
+<html>
+<body class="backGround">
+  
+  <div class="topnav">
+    <a class="active" routerLink="/trending">TRENDING MOVIES</a>
+    <div class="search-container">
+        <input type="text" size="30" placeholder="Enter Movie Name" name="search" (keyup.enter)="onClick()" [(ngModel)]="search">
+        <button type="submit" (click)="onClick()"><i class="fa fa-search"></i></button>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

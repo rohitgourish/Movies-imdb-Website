@@ -1,0 +1,9 @@
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <figure  *ngFor="let item of movieData" class="col-lg-2 cardDesign" (click)=onCardClick(item.id)>
+            <img [src] = "item.poster_path"  alt="item.title">
+            <figcaption>{{item.title}}</figcaption>
+        </figure>
+    </div>
+</div>

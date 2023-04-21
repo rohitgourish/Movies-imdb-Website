@@ -1,0 +1,20 @@
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 cardDesign">
+            <h1>{{movieDetails.title | uppercase}}</h1>
+            <img [src] = "movieDetails.poster_path">
+            <br><br>
+            <h6><u>RELEASE DATE</u>: {{movieDetails.release_date}} {{'('+movieDetails.status+')'}} {{'('+movieDetails.runtime+' min)'}}</h6>
+            <h5><u>DESCRIPTION</u></h5>
+            <h5>"{{movieDetails.tagline}}"</h5>
+            <h6>{{movieDetails.overview}}</h6>
+            <h6><u>GENRE</u>: <span *ngFor="let item of movieDetails.genres;let i = index">{{item.name+', '}}</span> </h6> 
+            <h6><u>PRODUCTION COMPANY</u>: {{movieDetails.production_companies[0]["name"]}}</h6>
+            <br>
+            <a target="_blank" [href]="ImdbPage(movieDetails.imdb_id)"><u>CLICK HERE TO OPEN IMDB PAGE</u></a>
+            <br>
+            <button class="btn btn-secondary" (click)="goBack()">GO BACK TO HOME PAGE</button>
+        </div>
+    </div>
+</div>
